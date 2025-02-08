@@ -6,8 +6,8 @@ import type React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Treasure Hunt",
-  description: "A fun treasure hunt game",
+  title: "19",
+  description: "happy bday cutie pai(1/3)",
 }
 
 export default function RootLayout({

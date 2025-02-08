@@ -83,20 +83,20 @@ export default function TreasureHunt() {
     };
 
     return (
-        <div className="flex items-center justify-center h-screen bg-black">
-            <div className="bg-gray-900 p-8 rounded-2xl shadow-lg flex items-center space-x-6 w-[80%] max-w-4xl">                
-                <p className="text-lg text-gray-300">{questions[currentQuestion].hint}</p>
+        <div className="flex items-center justify-center min-h-screen bg-black p-4">
+            <div className="bg-gray-900 p-6 md:p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 w-full max-w-lg md:max-w-4xl">                
+                <p className="text-lg text-gray-300 text-center md:text-left">{questions[currentQuestion].hint}</p>
                 <input
                     type="text"
                     value={userAnswer}
                     onChange={(e) => setUserAnswer(e.target.value)}
-                    className="p-2 border border-gray-700 rounded-md text-white bg-black text-lg"
+                    className="p-3 border border-gray-700 rounded-md text-white bg-black text-lg w-full md:w-auto"
                     placeholder="Enter your answer"
                 />
                 {wrongAnswer && <p className="text-red-500 font-bold">Wrong answer!</p>}
                 <motion.button
                     onClick={checkAnswer}
-                    className="p-2 bg-green-500 text-black rounded-md hover:bg-green-600 text-lg font-bold"
+                    className="p-3 bg-green-500 text-black rounded-md hover:bg-green-600 text-lg font-bold w-full md:w-auto"
                     animate={spin ? { rotate: 360 } : {}}
                     transition={{ duration: 1 }}
                 >
@@ -105,4 +105,5 @@ export default function TreasureHunt() {
             </div>
         </div>
     );
+    
 }
