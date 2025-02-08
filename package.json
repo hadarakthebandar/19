@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3",
+    "motion": "^12.4.1",
     "next": "15.1.6",
     "react": "^19.0.0",
+    "react-confetti": "^6.2.2",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
